@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Users, GraduationCap, MessageCircle, Target, Star, MapPin, Phone, Mail, Calendar } from 'lucide-react';
 import Link from 'next/link';
@@ -170,7 +170,7 @@ export default function Home() {
             <div className='relative'>
               <div className='bg-white rounded-2xl p-8 shadow-xl'>
                 <blockquote className='text-lg italic text-gray-700 mb-6'>
-                  "At RiseOn Education, we don't just teach—we inspire futures. From pages to possibilities, we guide the next generation to excellence."
+                  &quot;At RiseOn Education, we don&apos;t just teach—we inspire futures. From pages to possibilities, we guide the next generation to excellence.&quot;
                 </blockquote>
                 <div className='flex items-center'>
                   <div className='w-12 h-12 bg-riseon-green rounded-full flex items-center justify-center mr-4'>

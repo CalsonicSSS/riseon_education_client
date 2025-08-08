@@ -65,7 +65,7 @@ export default function ServicesPage() {
             </h1>
             <p className='text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed'>
               We offer personalized academic support designed to unlock your full potential and guide you to excellence. Our comprehensive programs are tailored to meet each
-              student's unique needs and goals.
+              student&apos;s unique needs and goals.
             </p>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function ServicesPage() {
                 </div>
               </div>
               <p className='text-lg text-gray-700'>
-                Our English tutoring program builds strong communication foundations through personalized instruction that adapts to each student's learning style and academic
+                Our English tutoring program builds strong communication foundations through personalized instruction that adapts to each student&apos;s learning style and academic
                 level.
               </p>
               <div className='space-y-3'>
@@ -276,7 +276,7 @@ export default function ServicesPage() {
                 </div>
                 <CardContent className='pl-0'>
                   <p className='text-gray-700 mb-4'>
-                    Our flagship personalized academic supervision program provides comprehensive support tailored to each student's unique learning journey.
+                    Our flagship personalized academic supervision program provides comprehensive support tailored to each student&apos;s unique learning journey.
                   </p>
                   <div className='space-y-2'>
                     <div className='flex items-center space-x-2'>
@@ -318,7 +318,7 @@ export default function ServicesPage() {
             <div className='text-center'>
               <div className='w-16 h-16 bg-riseon-green text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold'>1</div>
               <h3 className='text-lg font-semibold text-riseon-green mb-2'>Assessment</h3>
-              <p className='text-gray-600 text-sm'>Comprehensive evaluation of student's current level and learning style</p>
+              <p className='text-gray-600 text-sm'>Comprehensive evaluation of student&apos;s current level and learning style</p>
             </div>
             <div className='text-center'>
               <div className='w-16 h-16 bg-riseon-green text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold'>2</div>

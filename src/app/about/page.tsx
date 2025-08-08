@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, Users, GraduationCap, MessageCircle, Target, Star, MapPin, Calendar, Award, Heart, Lightbulb } from 'lucide-react';
+import { Calendar, Award, Heart, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us | RiseOn Education | Expert K-12 Tutoring Team in Toronto',
@@ -123,7 +123,7 @@ export default function AboutPage() {
                   <Heart className='w-8 h-8 text-white' />
                 </div>
                 <CardTitle className='text-riseon-green'>Compassion</CardTitle>
-                <CardDescription>We understand each student's unique journey and provide supportive, nurturing guidance tailored to their individual needs.</CardDescription>
+                <CardDescription>We understand each student&apos;s unique journey and provide supportive, nurturing guidance tailored to their individual needs.</CardDescription>
               </CardHeader>
             </Card>
 
