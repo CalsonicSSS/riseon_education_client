@@ -206,8 +206,8 @@ export default function Home() {
           <div className='grid md:grid-cols-2 gap-12'>
             <div>
               <h3 className='text-2xl font-bold text-riseon-green mb-6'>Contact Information</h3>
-              <div className='space-y-4'>
-                <div className='flex items-center'>
+              <div className='space-y-4 mb-8'>
+                <div className='flex items-center mb-10'>
                   <MapPin className='w-5 h-5 text-riseon-green mr-3' />
                   <div>
                     <p className='font-semibold text-gray-900'>Address</p>
@@ -215,35 +215,61 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='flex items-center'>
-                  <Phone className='w-5 h-5 text-riseon-green mr-3' />
-                  <div>
-                    <p className='font-semibold text-gray-900'>Phone</p>
-                    <p className='text-gray-600'>Coming Soon</p>
+                  <div className='flex items-center lg:mr-32 mr-16'>
+                    <Phone className='w-5 h-5 text-riseon-green mr-3' />
+                    <div>
+                      <p className='font-semibold text-gray-900'>Phone</p>
+                      <p className='text-gray-600'>Coming Soon</p>
+                    </div>
+                  </div>
+                  <div className='flex items-center'>
+                    <Mail className='w-5 h-5 text-riseon-green mr-3' />
+                    <div>
+                      <p className='font-semibold text-gray-900'>Email</p>
+                      <p className='text-gray-600'>Coming Soon</p>
+                    </div>
                   </div>
                 </div>
-                <div className='flex items-center'>
-                  <Mail className='w-5 h-5 text-riseon-green mr-3' />
-                  <div>
-                    <p className='font-semibold text-gray-900'>Email</p>
-                    <p className='text-gray-600'>Coming Soon</p>
-                  </div>
+              </div>
+
+              {/* Google Maps Embed */}
+              <div className='bg-white rounded-xl shadow-md overflow-hidden border border-riseon-cream'>
+                <div className='bg-riseon-green px-4 py-3'>
+                  <h4 className='text-white font-semibold text-sm'>Find Us</h4>
+                </div>
+                <div className='relative h-64'>
+                  <iframe
+                    src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.8844444444444!2d-79.3791!3d43.8561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d39c5c5c5c5c%3A0x5c5c5c5c5c5c5c5c!2s130%20Esna%20Park%20Dr%2C%20Markham%2C%20ON!5e0!3m2!1sen!2sca!4v1234567890'
+                    className='w-full h-full border-0'
+                    loading='lazy'
+                    referrerPolicy='no-referrer-when-downgrade'
+                    title='RiseOn Education Location - 130 Esna Park Drive, Unit 2B, Markham, ON'
+                  ></iframe>
+                </div>
+                <div className='px-4 py-3 bg-riseon-cream/30'>
+                  <p className='text-sm text-gray-600'>
+                    <MapPin className='w-4 h-4 inline mr-1 text-riseon-green' />
+                    Unit 2B, 130 Esna Park Drive, Markham
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className='bg-riseon-cream/50 rounded-2xl p-8'>
-              <h3 className='text-2xl font-bold text-riseon-green mb-6'>Schedule Your Free Consultation</h3>
-              <div className='space-y-4'>
-                <Button className='w-full bg-riseon-green hover:bg-riseon-green/90 text-white py-3'>
-                  <Calendar className='w-5 h-5 mr-2' />
-                  Book Free Consultation
-                </Button>
-                <Button variant='outline' className='w-full border-riseon-green text-riseon-green hover:bg-riseon-green hover:text-white py-3'>
-                  <MessageCircle className='w-5 h-5 mr-2' />
-                  Send Message
-                </Button>
+            <div className='bg-riseon-cream/50 rounded-2xl p-8 flex justify-center items-center'>
+              <div>
+                <h3 className='text-2xl font-bold text-riseon-green lg:mb-20 mb-10'>Schedule Your Free Consultation</h3>
+                <div className='space-y-6'>
+                  <Button className='w-full bg-riseon-green hover:bg-riseon-green/90 text-white py-3'>
+                    <Calendar className='w-5 h-5 mr-2' />
+                    Book Free Consultation
+                  </Button>
+                  <Button variant='outline' className='w-full border-riseon-green text-riseon-green hover:bg-riseon-green hover:text-white py-3'>
+                    <MessageCircle className='w-5 h-5 mr-2' />
+                    Send Message
+                  </Button>
+                </div>
+                <p className='text-sm text-gray-600 mt-6 text-center'>Elevate your education. Rise with us.</p>
               </div>
-              <p className='text-sm text-gray-600 mt-4 text-center'>Elevate your education. Rise with us.</p>
             </div>
           </div>
         </div>
@@ -255,9 +281,6 @@ export default function Home() {
           <div className='grid md:grid-cols-3 gap-8'>
             <div>
               <div className='flex items-center space-x-3 mb-4'>
-                <div className='w-8 h-8 flex items-center justify-center'>
-                  <Image src='/riseon-icon.png' alt='RiseOn Education Icon' width={32} height={32} className='object-contain' />
-                </div>
                 <div>
                   <h3 className='text-xl font-bold'>RiseOn Education</h3>
                   <p className='text-sm text-white/80'>From Pages to Possibilities</p>
