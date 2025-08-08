@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Users, GraduationCap, MessageCircle, Target, Star, MapPin, Phone, Mail, Calendar } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -21,17 +22,19 @@ export default function Home() {
               </div>
             </div>
             <div className='hidden md:flex space-x-6'>
-              <a href='#services' className='text-riseon-green hover:text-opacity-80 font-medium'>
+              <Link href='/services' className='text-riseon-green hover:text-opacity-80 font-medium'>
                 Services
-              </a>
-              <a href='#about' className='text-riseon-green hover:text-opacity-80 font-medium'>
+              </Link>
+              <Link href='/about' className='text-riseon-green hover:text-opacity-80 font-medium'>
                 About
-              </a>
-              <a href='#contact' className='text-riseon-green hover:text-opacity-80 font-medium'>
+              </Link>
+              <Link href='#contact' className='text-riseon-green hover:text-opacity-80 font-medium'>
                 Contact
-              </a>
+              </Link>
             </div>
-            <Button className='bg-riseon-green hover:bg-riseon-green/90 text-white'>Get Started</Button>
+            <Link href='/services'>
+              <Button className='bg-riseon-green hover:bg-riseon-green/90 text-white'>Get Started</Button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -54,7 +57,7 @@ export default function Home() {
                   Book Free Consultation
                 </Button>
                 <Button size='lg' variant='outline' className='border-riseon-green text-riseon-green hover:bg-riseon-green hover:text-white px-8 py-3'>
-                  Learn More
+                  <Link href='/services'>Learn More</Link>
                 </Button>
               </div>
             </div>
@@ -79,7 +82,7 @@ export default function Home() {
       <section id='services' className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
-            <Badge className='bg-riseon-cream text-riseon-green mb-4'>Our Services</Badge>
+            <Badge className='bg-riseon-cream text-riseon-green mb-4 hover:bg-riseon-cream hover:text-riseon-green'>Our Services</Badge>
             <h2 className='text-3xl md:text-4xl font-bold text-riseon-green mb-4'>Comprehensive Academic Excellence</h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>We offer personalized academic support designed to unlock your full potential and guide you to excellence.</p>
           </div>
@@ -163,16 +166,6 @@ export default function Home() {
                 Our mission is to nurture confident, well-rounded high achievers by combining rigorous academics with holistic development. Whether mastering languages, refining
                 communication, or building resilience, we empower students to rise above challenges and unlock their full potential.
               </p>
-              <div className='grid grid-cols-2 gap-6'>
-                <div className='text-center p-4 bg-white rounded-lg shadow-sm'>
-                  <h3 className='text-2xl font-bold text-riseon-green'>500+</h3>
-                  <p className='text-gray-600'>Students Served</p>
-                </div>
-                <div className='text-center p-4 bg-white rounded-lg shadow-sm'>
-                  <h3 className='text-2xl font-bold text-riseon-green'>95%</h3>
-                  <p className='text-gray-600'>Success Rate</p>
-                </div>
-              </div>
             </div>
             <div className='relative'>
               <div className='bg-white rounded-2xl p-8 shadow-xl'>
@@ -189,6 +182,16 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <div className='grid lg:grid-cols-2 grid-cols-1 gap-6 mt-10'>
+                <div className='text-center p-4 bg-white rounded-2xl shadow-xl'>
+                  <h3 className='text-2xl font-bold text-riseon-green'>500+</h3>
+                  <p className='text-gray-600'>Students Served</p>
+                </div>
+                <div className='text-center p-4 bg-white rounded-2xl shadow-xl'>
+                  <h3 className='text-2xl font-bold text-riseon-green'>95%</h3>
+                  <p className='text-gray-600'>Success Rate</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -198,7 +201,7 @@ export default function Home() {
       <section id='contact' className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
-            <Badge className='bg-riseon-cream text-riseon-green mb-4'>Get In Touch</Badge>
+            <Badge className='bg-riseon-cream text-riseon-green mb-4 hover:bg-riseon-cream hover:text-riseon-green'>Get In Touch</Badge>
             <h2 className='text-3xl md:text-4xl font-bold text-riseon-green mb-4'>Ready to Rise with Us?</h2>
             <p className='text-lg text-gray-600 max-w-3xl mx-auto'>Take the first step towards academic excellence. Contact us today to schedule your free consultation.</p>
           </div>
