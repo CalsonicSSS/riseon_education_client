@@ -196,14 +196,14 @@ export default function Home() {
                     <Phone className='w-5 h-5 text-riseon-green mr-3' />
                     <div>
                       <p className='font-semibold text-gray-900'>Phone</p>
-                      <p className='text-gray-600'>Coming Soon</p>
+                      <p className='text-gray-600'>437-688-1001</p>
                     </div>
                   </div>
                   <div className='flex items-center'>
                     <Mail className='w-5 h-5 text-riseon-green mr-3' />
                     <div>
                       <p className='font-semibold text-gray-900'>Email</p>
-                      <p className='text-gray-600'>Coming Soon</p>
+                      <p className='text-gray-600'>contact@riseoneducation.com</p>
                     </div>
                   </div>
                 </div>

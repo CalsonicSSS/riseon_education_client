@@ -1,3 +1,4 @@
+import { MailIcon, PhoneIcon } from 'lucide-react';
 import React from 'react';
 
 export function Footer() {
@@ -30,9 +31,18 @@ export function Footer() {
           <div>
             <h4 className='text-lg font-semibold mb-4'>Contact</h4>
             <div className='space-y-2 text-white/80'>
-              <p>130 Esna Park Drive, Unit 2B</p>
-              <p>Markham, ON</p>
-              <p>Toronto Area</p>
+              <span>130 Esna Park Drive, Unit 2B | </span>
+              <span>Markham, ON | </span>
+              <span>Toronto Area</span>
+            </div>
+            {/* add actual contact information with phone and email with icon*/}
+            <div className='space-y-2 text-white/80 mt-5'>
+              <p>
+                <PhoneIcon className='inline-block mr-2' /> Phone: 437-688-1001
+              </p>
+              <p>
+                <MailIcon className='inline-block mr-2' /> Email: contact@riseoneducation.com
+              </p>
             </div>
           </div>
         </div>
