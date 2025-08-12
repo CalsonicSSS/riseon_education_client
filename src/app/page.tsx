@@ -4,40 +4,14 @@ import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/ca
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Users, GraduationCap, MessageCircle, Target, Star, MapPin, Phone, Mail, Calendar } from 'lucide-react';
 import Link from 'next/link';
+import { NavBar } from '@/components/NavBar';
+import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
     <div className='min-h-screen bg-white'>
       {/* Navigation */}
-      <nav className='bg-white shadow-sm border-b border-riseon-cream sticky top-0 z-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex justify-between items-center h-16'>
-            <div className='flex items-center space-x-3'>
-              <div className='w-10 h-10 flex items-center justify-center'>
-                <Image src='/home/icon-only.png' alt='RiseOn Education Icon' width={40} height={40} className='object-contain' />
-              </div>
-              <div>
-                <h1 className='text-xl font-bold text-riseon-green'>RiseOn Education</h1>
-                <p className='text-xs text-gray-600 hidden sm:block'>From Pages to Possibilities</p>
-              </div>
-            </div>
-            <div className='hidden md:flex space-x-6'>
-              <Link href='/services' className='text-riseon-green hover:text-opacity-80 font-medium'>
-                Services
-              </Link>
-              <Link href='/about' className='text-riseon-green hover:text-opacity-80 font-medium'>
-                About
-              </Link>
-              <Link href='#contact' className='text-riseon-green hover:text-opacity-80 font-medium'>
-                Contact
-              </Link>
-            </div>
-            <Link href='/services'>
-              <Button className='bg-riseon-green hover:bg-riseon-green/90 text-white'>Get Started</Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <NavBar />
 
       {/* Hero Section */}
       <section className='bg-gradient-to-br from-riseon-cream to-white py-20 lg:py-28'>
@@ -278,47 +252,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className='bg-riseon-green text-white py-12'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='grid md:grid-cols-3 gap-8'>
-            <div>
-              <div className='flex items-center space-x-3 mb-4'>
-                <div>
-                  <h3 className='text-xl font-bold'>RiseOn Education</h3>
-                  <p className='text-sm text-white/80'>From Pages to Possibilities</p>
-                </div>
-              </div>
-              <p className='text-white/80'>Transforming learning into limitless opportunities through elite K-12 tutoring and admissions counseling.</p>
-            </div>
-
-            <div>
-              <h4 className='text-lg font-semibold mb-4'>Services</h4>
-              <ul className='space-y-2 text-white/80'>
-                <li>K-12 English Tutoring</li>
-                <li>K-12 French Tutoring</li>
-                <li>Admissions Counseling</li>
-                <li>Public Speaking</li>
-                <li>Executive Functions</li>
-                <li>1:1 Academic Supervision</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className='text-lg font-semibold mb-4'>Contact</h4>
-              <div className='space-y-2 text-white/80'>
-                <p>130 Esna Park Drive, Unit 2B</p>
-                <p>Markham, ON</p>
-                <p>Toronto Area</p>
-              </div>
-            </div>
-          </div>
-
-          <div className='border-t border-white/20 mt-12 pt-8 text-center text-white/60'>
-            <p>&copy; 2025 RiseOn Education. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

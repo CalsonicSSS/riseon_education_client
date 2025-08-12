@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BookOpen, Users, GraduationCap, MessageCircle, Target, Star, Calendar, CheckCircle, ArrowRight } from 'lucide-react';
+import { NavBar } from '@/components/NavBar';
+import { Footer } from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Our Services | RiseOn Education | K-12 Tutoring & Admissions Counseling in Toronto',
@@ -25,35 +26,7 @@ export default function ServicesPage() {
   return (
     <div className='min-h-screen bg-white'>
       {/* Navigation */}
-      <nav className='bg-white shadow-sm border-b border-riseon-cream sticky top-0 z-50'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex justify-between items-center h-16'>
-            <Link href='/' className='flex items-center space-x-3'>
-              <div className='w-10 h-10 flex items-center justify-center'>
-                <Image src='/home/icon-only.png' alt='RiseOn Education Icon' width={40} height={40} className='object-contain' />
-              </div>
-              <div>
-                <h1 className='text-xl font-bold text-riseon-green'>RiseOn Education</h1>
-                <p className='text-xs text-gray-600 hidden sm:block'>From Pages to Possibilities</p>
-              </div>
-            </Link>
-            <div className='hidden md:flex space-x-6'>
-              <Link href='/services' className='text-riseon-green hover:text-opacity-80 font-medium border-b-2 border-riseon-green'>
-                Services
-              </Link>
-              <Link href='/about' className='text-riseon-green hover:text-opacity-80 font-medium'>
-                About
-              </Link>
-              <Link href='/#contact' className='text-riseon-green hover:text-opacity-80 font-medium'>
-                Contact
-              </Link>
-            </div>
-            <Link href='/#contact'>
-              <Button className='bg-riseon-green hover:bg-riseon-green/90 text-white'>Get Started</Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <NavBar />
 
       {/* Hero Section */}
       <section className='bg-gradient-to-br from-riseon-cream to-white py-20 lg:py-28'>
@@ -342,68 +315,21 @@ export default function ServicesPage() {
       {/* CTA Section */}
       <section className='py-20 bg-riseon-green text-white'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-6'>Ready to Transform Your Academic Journey?</h2>
-          <p className='text-xl mb-8 text-white/90 max-w-3xl mx-auto'>
-            Schedule your free consultation today and discover how our personalized approach can help you achieve academic excellence.
-          </p>
+          <h2 className='text-3xl md:text-4xl font-bold mb-6'>Ready to Start Your Journey?</h2>
+          <p className='text-xl mb-8 text-white/90 max-w-3xl mx-auto'>Join the hundreds of students who have transformed their academic potential with RiseOn Education.</p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Button size='lg' className='bg-white text-riseon-green hover:bg-gray-100 px-8 py-3'>
-              <Link href='/#contact' className='flex'>
+            <Link href='/#contact'>
+              <Button size='lg' className='bg-white text-riseon-green hover:bg-gray-100 px-8 py-3'>
                 <Calendar className='w-5 h-5 mr-2' />
                 Book Free Consultation
-              </Link>
-            </Button>
-
-            <Button size='lg' variant='outline' className='border-white bg-white text-riseon-green px-8 py-3'>
-              <Link href='/about' className='flex'>
-                Learn About Our Team
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className='bg-riseon-green text-white py-12'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='grid md:grid-cols-3 gap-8'>
-            <div>
-              <Link href='/' className='flex items-center space-x-3 mb-4'>
-                <div>
-                  <h3 className='text-xl font-bold'>RiseOn Education</h3>
-                  <p className='text-sm text-white/80'>From Pages to Possibilities</p>
-                </div>
-              </Link>
-              <p className='text-white/80'>Transforming learning into limitless opportunities through elite K-12 tutoring and admissions counseling.</p>
-            </div>
-
-            <div>
-              <h4 className='text-lg font-semibold mb-4'>Services</h4>
-              <ul className='space-y-2 text-white/80'>
-                <li>K-12 English Tutoring</li>
-                <li>K-12 French Tutoring</li>
-                <li>Admissions Counseling</li>
-                <li>Public Speaking</li>
-                <li>Executive Functions</li>
-                <li>1:1 Academic Supervision</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className='text-lg font-semibold mb-4'>Contact</h4>
-              <div className='space-y-2 text-white/80'>
-                <p>130 Esna Park Drive, Unit 2B</p>
-                <p>Markham, ON</p>
-                <p>Toronto Area</p>
-              </div>
-            </div>
-          </div>
-
-          <div className='border-t border-white/20 mt-12 pt-8 text-center text-white/60'>
-            <p>&copy; 2025 RiseOn Education. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
