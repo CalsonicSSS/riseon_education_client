@@ -6,9 +6,10 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { NavBar } from '@/components/NavBar';
 import { Footer } from '@/components/Footer';
+import { CalendlyButton } from '@/components/CalendlyButton';
 
 // Metadata will be handled in layout or moved to separate metadata file
 
@@ -247,10 +248,9 @@ export default function AboutPage() {
           <p className='text-xl mb-8 text-white/90 max-w-3xl mx-auto'>Join the hundreds of students who have transformed their academic potential with RiseOn Education.</p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Link href='/#contact'>
-              <Button size='lg' className='bg-white text-riseon-green hover:bg-gray-100 px-8 py-3'>
-                <Calendar className='w-5 h-5 mr-2' />
+              <CalendlyButton size='lg' className='bg-white text-riseon-green hover:bg-gray-100 px-8 py-3'>
                 Book Free Consultation
-              </Button>
+              </CalendlyButton>
             </Link>
             <Link href='/services'>
               <Button size='lg' variant='outline' className='border-white bg-white text-riseon-green px-8 py-3'>

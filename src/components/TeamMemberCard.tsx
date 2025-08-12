@@ -8,7 +8,7 @@ import { LinkedinIcon, MailIcon } from 'lucide-react';
 // Co-founders data
 export const coFounders = [
   {
-    name: 'Dr. Emily Chen',
+    name: 'CF1',
     title: 'Co-Founder & CEO',
     image: '/team/emily-chen.jpg',
     description: 'Passionate educator with 15+ years experience transforming K-12 learning through innovative, personalized teaching methods.',
@@ -16,7 +16,7 @@ export const coFounders = [
     linkedin: 'linkedin.com/in/emily-chen-education',
   },
   {
-    name: 'Michael Rodriguez',
+    name: 'CF2',
     title: 'Co-Founder & Director of Operations',
     image: '/team/michael-rodriguez.jpg',
     description: 'Educational strategist specializing in admissions counseling and program development with proven student success track record.',
@@ -32,41 +32,53 @@ export const teachers = [
     title: 'Senior English Tutor',
     image: '/team/sarah-thompson.jpg',
     description: 'Award-winning educator helping students discover their voice in writing and develop strong critical thinking skills.',
+    email: 'sarah@riseon-education.com',
+    linkedin: 'linkedin.com/in/sarah-thompson-edu',
   },
   {
     name: 'Dr. François Dubois',
     title: 'French Language Specialist',
     image: '/team/francois-dubois.jpg',
     description: 'Native French speaker bringing authentic language expertise and cultural knowledge to bilingual education.',
+    email: 'francois@riseon-education.com',
+    linkedin: 'linkedin.com/in/francois-dubois-edu',
   },
   {
     name: 'Alexandra Kim',
     title: 'Public Speaking Coach',
     image: '/team/alexandra-kim.jpg',
     description: 'Former media professional empowering students to overcome speaking anxiety and develop confident presentation skills.',
+    email: 'alexandra@riseon-education.com',
+    linkedin: 'linkedin.com/in/alexandra-kim-edu',
   },
   {
     name: 'Dr. James Liu',
     title: 'Academic Support Specialist',
     image: '/team/james-liu.jpg',
     description: 'Learning specialist focused on developing executive function skills and effective study strategies for academic success.',
+    email: 'james@riseon-education.com',
+    linkedin: 'linkedin.com/in/james-liu-edu',
   },
   {
     name: 'Rachel Martinez',
     title: 'Admissions Counselor',
     image: '/team/rachel-martinez.jpg',
     description: 'Former university admissions officer guiding students through competitive application processes with insider expertise.',
+    email: 'rachel@riseon-education.com',
+    linkedin: 'linkedin.com/in/rachel-martinez-edu',
   },
   {
     name: 'David Park',
     title: 'Mathematics & Science Tutor',
     image: '/team/david-park.jpg',
     description: 'STEM specialist making complex mathematical concepts accessible and engaging through innovative teaching approaches.',
+    email: 'david@riseon-education.com',
+    linkedin: 'linkedin.com/in/david-park-edu',
   },
 ];
 
 // Team member card component
-export function TeamMemberCard({ member, isFounder = false }: { member: any; isFounder?: boolean }) {
+export function TeamMemberCard({ member, isFounder = false }: { member: (typeof teachers)[0] | (typeof coFounders)[0]; isFounder?: boolean }) {
   const [imageError, setImageError] = useState(false);
 
   return (
@@ -103,7 +115,7 @@ export function TeamMemberCard({ member, isFounder = false }: { member: any; isF
         <p className='text-gray-700 text-sm leading-relaxed mb-6'>{member.description}</p>
 
         {/* Contact info for founders */}
-        {isFounder && member.email && (
+        {member.email && (
           <div className='flex justify-center space-x-6 pt-4 border-t border-gray-200'>
             <a href={`mailto:${member.email}`} className='flex items-center text-riseon-green hover:text-riseon-green/80 transition-colors'>
               <MailIcon className='w-4 h-4 mr-2' />

@@ -2,10 +2,11 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { BookOpen, Users, GraduationCap, MessageCircle, Target, Star, MapPin, Phone, Mail, Calendar } from 'lucide-react';
+import { BookOpen, Users, GraduationCap, MessageCircle, Target, Star, MapPin, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 import { NavBar } from '@/components/NavBar';
 import { Footer } from '@/components/Footer';
+import { CalendlyButton } from '@/components/CalendlyButton';
 
 export default function Home() {
   return (
@@ -26,10 +27,9 @@ export default function Home() {
                 well-rounded high achievers.
               </p>
               <div className='flex flex-col sm:flex-row gap-4'>
-                <Button size='lg' className='bg-riseon-green hover:bg-riseon-green/90 text-white px-8 py-3'>
-                  <Calendar className='w-5 h-5 mr-2' />
+                <CalendlyButton size='lg' className='bg-riseon-green hover:bg-riseon-green/90 text-white px-8 py-3'>
                   Book Free Consultation
-                </Button>
+                </CalendlyButton>
                 <Button size='lg' variant='outline' className='border-riseon-green text-riseon-green hover:bg-riseon-green hover:text-white px-8 py-3'>
                   <Link href='/services'>Learn More</Link>
                 </Button>
@@ -236,10 +236,7 @@ export default function Home() {
               <div>
                 <h3 className='text-2xl font-bold text-riseon-green lg:mb-20 mb-10'>Schedule Your Free Consultation</h3>
                 <div className='space-y-6'>
-                  <Button className='w-full bg-riseon-green hover:bg-riseon-green/90 text-white py-3'>
-                    <Calendar className='w-5 h-5 mr-2' />
-                    Book Free Consultation
-                  </Button>
+                  <CalendlyButton className='w-full bg-riseon-green hover:bg-riseon-green/90 text-white py-3'>Book Free Consultation</CalendlyButton>
                   <Button variant='outline' className='w-full border-riseon-green text-riseon-green hover:bg-riseon-green hover:text-white py-3'>
                     <MessageCircle className='w-5 h-5 mr-2' />
                     Send Message
