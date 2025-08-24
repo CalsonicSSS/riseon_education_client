@@ -41,7 +41,7 @@ export function NavBar() {
         <div className='flex justify-between items-center h-16'>
           {/* Logo */}
           <Link href='/' className='flex items-center space-x-3' onClick={closeMobileMenu}>
-            <Image src='/home/11.png' alt='RiseOn Education Icon' width={55} height={55} className='object-contain' />
+            <Image src='/home/11.png' alt='RiseOn Education Icon' width={72} height={72} className='object-contain' />
             <div>
               <h1 className='sm:text-lg lg:text-2xl font-bold text-riseon-cream'>RiseOn Education</h1>
               <p className='text-sm text-riseon-cream hidden sm:block'>From Pages to Possibilities</p>
