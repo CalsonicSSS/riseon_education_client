@@ -56,9 +56,9 @@ export function NavBar() {
             <Link href='/services' className={getLinkClassName('/services')}>
               Services
             </Link>
-            <Link href='/team' className={getLinkClassName('/team')}>
+            {/* <Link href='/team' className={getLinkClassName('/team')}>
               Our Team
-            </Link>
+            </Link> */}
             <Link href='/#contact' className={getLinkClassName('#contact')}>
               Contact Us
             </Link>
