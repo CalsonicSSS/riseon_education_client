@@ -89,9 +89,9 @@ export function NavBar() {
               <Link href='/services' className={getLinkClassName('/services', true)} onClick={closeMobileMenu}>
                 Services
               </Link>
-              <Link href='/team' className={getLinkClassName('/team', true)} onClick={closeMobileMenu}>
+              {/* <Link href='/team' className={getLinkClassName('/team', true)} onClick={closeMobileMenu}>
                 Our Team
-              </Link>
+              </Link> */}
               <Link href='#contact' className={getLinkClassName('#contact', true)} onClick={closeMobileMenu}>
                 Contact Us
               </Link>
