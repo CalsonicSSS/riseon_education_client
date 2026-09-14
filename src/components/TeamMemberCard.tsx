@@ -16,11 +16,11 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     name: 'Aime Kayembe',
-    title: 'French Specialist | OCT Certified Teacher',
+    title: 'French Specialist | Ontario Certified Teacher (OCT)',
     image: '/team/Aime\u0301.jpg',
     description:
-      'Aime is a French educator currently pursuing a Ph.D. in K–12 Educational Leadership at the University of Calgary. He holds both a Bachelor\'s and Master\'s degree in Education from Trent University and teaches French at Lakefield College School, one of Ontario\'s leading boarding schools. As a certified DELF examiner, he helps students develop advanced language proficiency while building confidence in French communication and cultural understanding.',
-    expertise: 'French (Core, Extended & Immersion), DELF Preparation, AP French, IB French',
+      'Aime Kayembe is an Ontario Certified Teacher (OCT) and French language educator with expertise in language instruction, assessment, and student development. He holds bachelor\'s and master\'s degrees in Education from Trent University and is currently pursuing a doctoral degree in K–12 Educational Leadership at the University of Calgary.\n\nAime is also a DELF examiner and brings a strong focus on effective communication, language proficiency, and confidence-building. He supports students in developing their French skills across different levels and learning contexts, while fostering an appreciation for Francophone cultures and perspectives.',
+    expertise: 'French Language & Culture, Core/Extended/Immersion French, DELF Preparation, AP French, IB French',
   },
   {
     name: 'Daniel Pun',
@@ -110,7 +110,7 @@ export function TeamMemberCard({ member }: { member: TeamMember }) {
 
         <CardTitle className='text-riseon-green text-xl mb-2'>{member.name}</CardTitle>
         <CardDescription className='text-gray-600 font-medium mb-4'>{member.title}</CardDescription>
-        <p className='text-gray-700 text-sm leading-relaxed mb-4 text-left'>{member.description}</p>
+        <p className='text-gray-700 text-sm leading-relaxed mb-4 text-left whitespace-pre-line'>{member.description}</p>
         <div className='text-left pt-4 border-t border-gray-200'>
           <p className='text-sm font-semibold text-riseon-green mb-2'>Expertise:</p>
           <Badge className='bg-riseon-cream text-riseon-green text-xs font-normal whitespace-normal text-left leading-relaxed'>
